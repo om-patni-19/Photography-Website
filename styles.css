@@ -1,0 +1,584 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #ffe5b4, #1e1e1e);
+    color: #fff;
+}
+
+/* Wrapper for all pages */
+.page-wrapper {
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Consistent Headings */
+h1, h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #f5f5f5;
+    border-bottom: 2px solid #ff6600;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Consistent Paragraphs */
+p {
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #e0e0e0;
+}
+
+/* Consistent Buttons & Links */
+a.btn, button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+a.btn:hover, button:hover {
+    background-color: #e65c00;
+}
+
+a {
+    color: #ffcc80;
+}
+
+/* Form Container */
+.form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 25px;
+    background: white;
+    color: #222; /* Added: dark text for visibility */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Form Elements */
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: left;
+    color: #222;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    color: #222;
+}
+
+button {
+    margin-top: 20px;
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e65c00;
+}
+
+/* Star Rating */
+#star-rating {
+    margin-top: 10px;
+}
+
+#star-rating span {
+    font-family: "Arial Black", Impact, sans-serif;
+    font-size: 36px;
+    color: #555; /* dark gray for visibility on white */
+    -webkit-text-stroke: 1px black;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+#star-rating span.hovered,
+#star-rating span.selected {
+    color: gold; /* Gold fill on hover or selection */
+    -webkit-text-stroke: 1px black; /* Keep black outline */
+}
+
+/* Reviews Section */
+#reviews-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+#reviews-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+#reviews-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.review-item {
+    background: #f9f9f9;
+    padding: 15px 20px;
+    border-left: 5px solid #ff6600;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.review-item strong {
+    font-size: 1.2em;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.review-item p {
+    font-size: 1em;
+    color: #555;
+    margin: 5px 0 0 0;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 15px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to right, #000000, #333333);
+    position: relative;
+    background-image: url('hero-bg.jpg');
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #ffffff;
+    z-index: 1;
+    position: relative;
+}
+
+.hero p {
+    font-size: 1.5em;
+    color: #f1f1f1;
+    z-index: 1;
+    position: relative;
+}
+
+/* Gallery Section */
+.gallery h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.project {
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.project h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.scroll-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.scroll-btn {
+    background-color: #444;
+    color: white;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 2;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.image-cluster {
+    overflow-x: auto;
+    display: flex;
+    align-items: center;
+    height: 200px;
+    scroll-behavior: smooth;
+    gap: 10px;
+    padding: 10px;
+    max-width: 90vw;
+}
+
+.image-cluster img,
+.image-cluster video {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.image-cluster img:hover {
+    transform: scale(1.05);
+}
+
+/* Overlay styles */
+#image-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#image-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.admin {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+/* For enlarged media overlay */
+#media-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#media-overlay video {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* For images in the gallery */
+.project .scroll-wrapper img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;  /* Ensures images maintain aspect ratio */
+    cursor: pointer;
+}
+
+/* Optional hover effect for images to indicate they can be clicked */
+.project .scroll-wrapper img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    transition: transform 0.3s ease;
+}
+
+/* For videos in the gallery */
+.project .scroll-wrapper video {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Overlay for enlarged images and videos */
+#image-overlay, #video-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#overlay-img, #overlay-video {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+/* Ensures the overlay contents are centered */
+#overlay-video {
+    display: none;
+}
+
+.media-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.preview-video {
+    width: 200px; /* adjust size as needed */
+    height: auto;
+    pointer-events: none; /* disables play/pause on video directly */
+}
+
+.custom-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 20px;
+    pointer-events: none; /* lets clicks pass through */
+}
+
+.media-thumbnail {
+  width: 150px;
+  height: 225px;
+  margin: 0 5px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.media-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-thumbnail {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.4);
+  clip-path: polygon(20% 10%, 80% 50%, 20% 90%);
+}
+
+/* Button styling */
+.btn {
+    display: inline-block;
+    background-color: #ff6600;
+    color: white;
+    padding: 15px 30px;
+    margin-top: 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.2s;
+    z-index: 1;
+    position: relative;
+}
+
+.btn:hover {
+    background-color: #e65c00;
+    transform: scale(1.05);
+}
+
+/* Hero background image and overlay */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: linear-gradient(to right, #000000, #333333);
+    background-image: url('hero-bg.jpg');  /* FIXED */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 0;
+}
+
+.hero h1, .hero p, .btn {
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Elegant Contact Section */
+.contact {
+    background: linear-gradient(to right, #1f1f1f, #2c2c2c);
+    color: #f5f5f5;
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #444;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.contact h2 {
+    font-size: 2.8em;
+    margin-bottom: 30px;
+    color: #ff6600;
+    letter-spacing: 1px;
+}
+
+.contact p {
+    font-size: 1.2em;
+    margin: 14px 0;
+    line-height: 1.6;
+}
+
+.contact a {
+    color: #f5f5f5;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+.contact a:hover {
+    border-bottom: 2px solid #ff6600;
+    color: #ff6600;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #f5f5f5;
+    font-size: 2em;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff6600;
+}
+
+.admin {
+    background-color: #f9f9f9 !important;
+}
+
+/* Founder Image Styling */
+.founder-photo {
+    text-align: left;
+    margin: 30px 0;
+}
+
+.founder-img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+
